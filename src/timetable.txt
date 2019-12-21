@@ -1,0 +1,5 @@
+cur_train Passenger 13:40 15:50 Chicago 5 left
+arrive_train London 08:15 Glasgow 7 left 2 1
+leave_train 10:30 0 0
+adding_carriage 1 0 0 09:45
+end
