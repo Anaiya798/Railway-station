@@ -1,7 +1,6 @@
-package com.spbu.mcs.ppl.ppl;
-
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Scanner;
 import java.util.logging.FileHandler;
 import java.util.logging.Handler;
@@ -11,14 +10,19 @@ public class App
 {
     private static final Logger logger_app = Logger.getLogger(App.class.getName());
     Handler fileHandler_ap = new FileHandler("%h/working_process.log");
-    logger_app.setUseParentHandlers(false);
-    logger_app.addHandler(fileHandler_ap);
 
-    public static void main(String[] args) {
+    public App() throws IOException {
+        logger_app.setUseParentHandlers(false);
+        logger_app.addHandler(fileHandler_ap);
+    }
+
+
+    public static void main(String[] args) throws IOException {
+
         logger_app.info("Method main in class App called");
-        Acts cmd = new Acts();
+        Inits cmd = new Inits();
         Station station = new Station();
-        File f = new File("src/com/timetable.txt");
+        File f = new File("src/timetable.txt");
         logger_app.info("File timetable.txt opened");
         try {
             Scanner in = new Scanner(f);
@@ -30,12 +34,13 @@ public class App
                     break;
 
                 }
-                cmd.Act(new_cmd, in, station);
+                cmd.Init(new_cmd, in, station);
             }
         }
-      catch(FileNotFoundException ex)
-            {
-                System.out.println(ex);
-            }
+        catch(FileNotFoundException ex) {
+            System.out.println(ex);
         }
+
+        station.shedule.execute();
     }
+}

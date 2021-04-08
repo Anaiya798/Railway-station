@@ -1,0 +1,14 @@
+00:00 - 08:16 no events
+08:17 Platform 2 was allocated for train345
+08:18 - 08:26 no events
+08:27 Passenger train 345London-Glasgow arrived.Platform: 2, track: 1Carriage number: 7 (from left side)
+08:28 - 08:31 no events
+08:32 Added 1 carriage to train 345
+08:33 - 09:44 no events
+09:45 Passenger train 345London-Glasgow left. Platform: 2, track: 1 Carriage number: 8 (from left side)
+Platform 2 is free 
+09:46 - 10:28 no events
+10:29 Platform 3 was allocated for train654
+10:30 - 10:58 no events
+10:59 Passenger train 654London-Paris arrived.Platform: 3, track: 0Carriage number: 8 (from right side)
+11:00 - 23:59 no events

@@ -1,5 +1,8 @@
-cur_train Passenger 13:40 15:50 Chicago 5 left
-arrive_train London 08:15 Glasgow 7 left 2 1
-leave_train 10:30 0 0
-adding_carriage 1 0 0 09:45
+train 345 passing Passenger London-Glasgow 7
+train 654 local_forming_start Passenger London-Paris 8
+arrive_train 1 345 08:15 left 2 1
+adding_carriage 2 1 1
+hold_train 3 1 12
+leave_train 4 345 09:45 left 2 1
+arrive_train 5 654 10:59 right 3 0
 end
